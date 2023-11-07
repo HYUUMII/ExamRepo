@@ -1,5 +1,11 @@
 body {
     font-family: 'Edu TAS Beginner', cursive;
+    font-size:30px;
+    color: white;
+    background-image: url(https://images.unsplash.com/photo-1582769923195-c6e60dc1d8dc?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
@@ -25,54 +31,52 @@ h1 {
     height: 70px;
     font-weight: bold;
     font-size: 40px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 3px 3px 3px rgb(34, 6, 55);
     cursor: pointer;
     animation: mymove 15s infinite alternate;
 }
 
 .x {
-    background-color: rgb(132, 0, 255); 
+    background-color: rgb(198, 138, 255); 
     text-align: center;
     width: 75px;
     height: 70px;
     font-weight: bold;
     font-size: 40px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 3px 3px 3px rgb(34, 6, 55);
     cursor: pointer;
 }
 .o {
-    background-color: rgb(223, 61, 255);
+    background-color: rgb(255, 156, 245);
     text-align: center;
     width: 75px;
     height: 70px;
     font-weight: bold;
     font-size: 40px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 3px 3px 3px rgb(34, 6, 55);
     cursor: pointer;
 }
 
 @keyframes mymove {
    0% {
-    background-color: rgb(98, 63, 255);
+    background-color: rgb(255, 63, 210);
    }
-   14% {
+   25% {
     background-color: rgb(195, 0, 255);
    }
 
-    28% {
-     background-color: rgb(255, 122, 242);
+    45% {
+     background-color: rgb(89, 0, 255);
     }
-    42% {
-     background-color: rgb(255, 4, 159);
+    65% {
+     background-color: rgb(21, 0, 255);
     }
-    66% {
-     background-color: rgb(255, 16, 96);
+    85% {
+     background-color: rgb(222, 34, 255);
     }
-    82% {
-     background-color: rgb(123, 7, 206);
-    }
+    
     100% {
-     background-color: violet;
+     background-color: rgb(5, 130, 238);
     }
 }
 
