@@ -1,9 +1,12 @@
+//Explicit Types
 const board = document.querySelector('.game-container') as HTMLElement;
 const button = document.querySelector('.button') as HTMLElement;
 const winMessage = document.querySelector('.winner') as HTMLElement;
 
+// Union Type
 type Turn = 'X' | 'O' | '';
 
+// Implicit type
 let turn: Turn = 'X';
 
 function listenBoard(): void {
@@ -17,10 +20,11 @@ function main(): void {
 }
 
 function runGame(e: Event): void {
-    const boxId: string | null = (<HTMLElement>e.target).id;
+     // Union Type
+    const boxId: string | null = (<HTMLElement>e.target).id; // Optional Property
     console.log(boxId);
-    if (boxId === null) return;
-    const box: HTMLElement | null = document.querySelector(`#${boxId}`);
+    if (boxId === null) return; 
+    const box: HTMLElement | null = document.querySelector(`#${boxId}`); // Utilizing DOM
     if (box === null || box.textContent !== '') return;
     box.textContent = turn;
     changeBoxBackground(box);
@@ -70,7 +74,7 @@ function resetBoxes(): void {
 }
 
 function checkWinner(): boolean {
-    const boxes: Array<string> = getBoxes();
+    const boxes: Array<string> = getBoxes(); //Arrays
     return (
         (boxes[0] === boxes[1] && boxes[1] === boxes[2] && boxes[0] !== '') ||
         (boxes[3] === boxes[4] && boxes[4] === boxes[5] && boxes[3] !== '') ||
@@ -84,10 +88,10 @@ function checkWinner(): boolean {
 }
 
 function getBoxes(): Array<string> {
-    const boxesContent: Array<string> = [];
+    const boxesContent: Array<string> = []; //Arrays
     for (let i = 0; i <= 8; i++) {
         const box = document.querySelector(`#box-${i}`) as HTMLElement;
-        const boxContent: string | null = box.textContent;
+        const boxContent: string | null = box.textContent; // Optional Property
         if (boxContent === null) boxesContent.push('');
         else {
             boxesContent.push(boxContent);
@@ -129,3 +133,6 @@ function displayTieMessage(): void {
 }
 
 main();
+
+
+
